@@ -2,7 +2,7 @@ import { getTasksList } from "./tasksGateway.js";
 
 const listElem = document.querySelector(".list");
 
-const createCheckbox = (done, id) => {
+export const createCheckbox = (done, id) => {
   const checkboxElem = document.createElement("input");
   checkboxElem.setAttribute("type", "checkbox");
   checkboxElem.classList.add("list__item-checkbox");
