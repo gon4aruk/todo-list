@@ -9,8 +9,8 @@
     "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
     "copy:html": "@powershell copy ./src/index.html ./dist/index.html",
     "copy:scripts": "@powershell copy -R ./src/scripts ./dist/scripts",
-    "clear": "@powershell rm ./dist -r -fo",
-    "build": "npm-run-all clear build:styles copy:*"
+    "clean": "@powershell rm ./dist -r -fo",
+    "build": "npm-run-all clean build:styles copy:*"
   },
   "repository": {
     "type": "git",
