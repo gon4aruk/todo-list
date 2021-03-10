@@ -6,11 +6,11 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
+    "build:scripts": "webpack --mode=production",
     "copy:html": "@powershell copy ./src/index.html ./dist/index.html",
-    "copy:scripts": "@powershell copy -R ./src/scripts ./dist/scripts",
     "clean": "@powershell rm ./dist -r -fo",
-    "build": "npm-run-all clean build:styles copy:*"
+    "build": "npm-run-all clean build:* copy:*",
+    "watch": "webpack --mode=development --devtool eval-source-map -w"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,22 @@
   },
   "homepage": "https://github.com/gon4aruk/todo-list#readme",
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.9",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.1",
+    "file-loader": "^6.2.0",
     "jest": "^26.6.3",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "core-js": "^3.9.1"
   }
 }

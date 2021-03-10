@@ -1,5 +1,6 @@
-import { initToDoListHandlers } from "./initHandlers.js";
-import { renderTasks } from "./renderTasks.js";
+import { initToDoListHandlers } from "./list/initHandlers.js";
+import { renderTasks } from "./list/renderTasks.js";
+import './index.scss';
 
 const onDocumentLoaded = () => {
   renderTasks();
