@@ -6,10 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build:scripts": "webpack --mode=production",
-    "copy:html": "@powershell copy ./src/index.html ./dist/index.html",
-    "clean": "@powershell rm ./dist -r -fo",
-    "build": "npm-run-all clean build:* copy:*",
+    "build": "webpack --mode=production",
     "watch": "webpack --mode=development --devtool eval-source-map -w"
   },
   "repository": {
@@ -28,9 +25,12 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.9",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.1.1",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
     "jest": "^26.6.3",
+    "mini-css-extract-plugin": "^1.3.9",
     "npm-run-all": "^4.1.5",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
