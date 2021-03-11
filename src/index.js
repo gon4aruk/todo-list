@@ -1,5 +1,5 @@
-import { initToDoListHandlers } from "./list/initHandlers.js";
-import { renderTasks } from "./list/renderTasks.js";
+import { initToDoListHandlers } from './list/initHandlers';
+import { renderTasks } from './list/renderTasks';
 import './index.scss';
 
 const onDocumentLoaded = () => {
@@ -7,14 +7,14 @@ const onDocumentLoaded = () => {
   initToDoListHandlers();
 };
 
-document.addEventListener("DOMContentLoaded", onDocumentLoaded);
+document.addEventListener('DOMContentLoaded', onDocumentLoaded);
 
 const onStorageChange = (event) => {
-  if (event.key !== "tasksList") {
+  if (event.key !== 'tasksList') {
     return;
   }
 
   renderTasks();
 };
 
-window.addEventListener("storage", onStorageChange);
+window.addEventListener('storage', onStorageChange);

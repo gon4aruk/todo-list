@@ -1,10 +1,10 @@
-import { renderTasks } from "./renderTasks.js";
-import { createTask } from "./tasksGateway.js";
+import { renderTasks } from './renderTasks';
+import { createTask } from './tasksGateway';
 
-const inputElem = document.querySelector(".task-input");
+const inputElem = document.querySelector('.task-input');
 
 export const onButtonClick = () => {
-  if (inputElem.value === "") {
+  if (inputElem.value === '') {
     return;
   }
 
@@ -15,8 +15,8 @@ export const onButtonClick = () => {
     text: inputValue,
     done: false,
     timeOfChange: new Date(),
-  }
+  };
 
   createTask(newTask)
-    .then(() => renderTasks())
+    .then(() => renderTasks());
 };

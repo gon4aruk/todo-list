@@ -1,5 +1,5 @@
-import { renderTasks } from "./renderTasks.js";
-import { deleteTask, getTasksList, updateTask } from "./tasksGateway.js";
+import { renderTasks } from './renderTasks';
+import { deleteTask, getTasksList, updateTask } from './tasksGateway';
 
 const createUpdatedTask = (event, tasksList, taskId) => {
   const { done, ...rest } = tasksList.find((task) => task.id === taskId);
@@ -29,9 +29,9 @@ const onDeleteBtnClick = (event) => {
 };
 
 export const onListClick = (event) => {
-  const isCheckbox = event.target.classList.contains("list__item-checkbox");
-  const isDeleteBtn = event.target.classList.contains("list__item_delete-btn");
-  
+  const isCheckbox = event.target.classList.contains('list__item-checkbox');
+  const isDeleteBtn = event.target.classList.contains('list__item_delete-btn');
+
   if (isCheckbox) {
     onCheckboxClick(event);
   } else if (isDeleteBtn) {
